@@ -1,0 +1,296 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		FA515EF9136DCD1100A8F962 /* Universal_Framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = FA515F04136DCD1100A8F962 /* Build configuration list for PBXAggregateTarget "Universal_Framework" */;
+			buildPhases = (
+				FA515EF8136DCD1100A8F962 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Universal_Framework;
+			productName = Universal_Framework;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		FA515EFE136DCD1100A8F962 /* BspDragDrop-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA515EFD136DCD1100A8F962 /* BspDragDrop-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FA515EF6136DCD1100A8F962 /* BspDragDrop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BspDragDrop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA515EFC136DCD1100A8F962 /* BspDragDrop-Prefix.pch */ = {isa = PBXFileReference; path = "BspDragDrop-Prefix.pch"; sourceTree = "<group>"; };
+		FA515EFD136DCD1100A8F962 /* BspDragDrop-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BspDragDrop-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA515EF1136DCD1100A8F962 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA515EE9136DCD1100A8F962 = {
+			isa = PBXGroup;
+			children = (
+				FA515EFA136DCD1100A8F962 /* BspDragDrop */,
+				FA515EF7136DCD1100A8F962 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA515EF7136DCD1100A8F962 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA515EF6136DCD1100A8F962 /* BspDragDrop.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA515EFA136DCD1100A8F962 /* BspDragDrop */ = {
+			isa = PBXGroup;
+			children = (
+				FA515EFD136DCD1100A8F962 /* BspDragDrop-Info.plist */,
+				FA515EFB136DCD1100A8F962 /* Supporting Files */,
+			);
+			path = BspDragDrop;
+			sourceTree = "<group>";
+		};
+		FA515EFB136DCD1100A8F962 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA515EFC136DCD1100A8F962 /* BspDragDrop-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FA515EF2136DCD1100A8F962 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		FA515EF5136DCD1100A8F962 /* BspDragDrop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA515F01136DCD1100A8F962 /* Build configuration list for PBXNativeTarget "BspDragDrop" */;
+			buildPhases = (
+				FA515EF0136DCD1100A8F962 /* Sources */,
+				FA515EF1136DCD1100A8F962 /* Frameworks */,
+				FA515EF2136DCD1100A8F962 /* Headers */,
+				FA515EF3136DCD1100A8F962 /* Resources */,
+				FA515EF4136DCD1100A8F962 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BspDragDrop;
+			productName = BspDragDrop;
+			productReference = FA515EF6136DCD1100A8F962 /* BspDragDrop.framework */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA515EEB136DCD1100A8F962 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Wincor-Nixdorf Technology GmbH";
+			};
+			buildConfigurationList = FA515EEE136DCD1100A8F962 /* Build configuration list for PBXProject "BspDragDrop" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FA515EE9136DCD1100A8F962;
+			productRefGroup = FA515EF7136DCD1100A8F962 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA515EF5136DCD1100A8F962 /* BspDragDrop */,
+				FA515EF9136DCD1100A8F962 /* Universal_Framework */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA515EF3136DCD1100A8F962 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA515EFE136DCD1100A8F962 /* BspDragDrop-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FA515EF4136DCD1100A8F962 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\nrm -f \"${CONFIGURATION_BUILD_DIR}/FakeFramework\"\nif [ -f \"${CONFIGURATION_BUILD_DIR}/${EXECUTABLE_PATH}\" ]; then\n\tcp \"${CONFIGURATION_BUILD_DIR}/${EXECUTABLE_PATH}\" \"${CONFIGURATION_BUILD_DIR}/FakeFramework\"\nfi\n\t\t\t\t\t";
+		};
+		FA515EF8136DCD1100A8F962 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\n# Config\n\nUFW_TARGET=${PROJECT}\n\n\n\n# Defaults\n\n# Default build dir\nUFW_BUILD_DIR=\"./build\"\n\n\n\n# Global vars\n\n#if [ ! -z ${BUILD_DIR} ]; then\n## Use the build dir specified by XCode\n#    UFW_BUILD_DIR=\"${BUILD_DIR}\"\n#fi\n\nif [ -z ${SDK_NAME} ]; then\n    # Use the latest iphoneos SDK available\n    UFW_GREP_RESULT=$(xcodebuild -showsdks | grep -o \"iphoneos.*$\")\n    while read -r line; do\n    UFW_SDK_VERSION=\"${line}\"\n    done <<< \"${UFW_GREP_RESULT}\"\nelse\n    # Use the SDK specified by XCode\n    UFW_SDK_VERSION=\"${SDK_NAME}\"\nfi\n\nUFW_SDK_VERSION=$(echo \"${UFW_SDK_VERSION}\" | grep -o \"[0-9].*$\")\nUFW_EXE_FOLDER_PATH=\"${UFW_TARGET}.framework\"\nUFW_EXE_PATH=\"${UFW_EXE_FOLDER_PATH}/${UFW_TARGET}\"\nUFW_IPHONE_DIR=\"${UFW_BUILD_DIR}/Release-iphoneos\"\nUFW_SIMULATOR_DIR=\"${UFW_BUILD_DIR}/Release-iphonesimulator\"\nUFW_UNIVERSAL_DIR=\"${UFW_BUILD_DIR}/Release-universal\"\n\n\n# Build Framework\n\nrm -rf \"${UFW_UNIVERSAL_DIR}\"\n\nxcodebuild -target \"${UFW_TARGET}\" -configuration Release -sdk iphoneos${UFW_SDK_VERSION} clean build\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: xcodebuild failed\"; exit 1; fi\nxcodebuild -target \"${UFW_TARGET}\" -configuration Release -sdk iphonesimulator${UFW_SDK_VERSION} clean build\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: xcodebuild failed\"; exit 1; fi\n\nif [ ! -f \"${UFW_IPHONE_DIR}/${UFW_EXE_PATH}\" ]; then\n    echo \"Framework target \\\"${UFW_TARGET}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\nmkdir -p \"${UFW_UNIVERSAL_DIR}\"\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: mkdir failed\"; exit 1; fi\n\ncp -a \"${UFW_IPHONE_DIR}/${UFW_EXE_FOLDER_PATH}\" \"${UFW_UNIVERSAL_DIR}/${UFW_EXE_FOLDER_PATH}\"\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: cp failed\"; exit 1; fi\n\nlipo -create -output \"${UFW_UNIVERSAL_DIR}/${UFW_EXE_PATH}\" \"${UFW_IPHONE_DIR}/${UFW_EXE_PATH}\" \"${UFW_SIMULATOR_DIR}/${UFW_EXE_PATH}\"\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: lipo failed\"; exit 1; fi\n\t\t\t\t\t";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA515EF0136DCD1100A8F962 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FA515EFF136DCD1100A8F962 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FA515F00136DCD1100A8F962 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		FA515F02136DCD1100A8F962 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEAD_CODE_STRIPPING = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BspDragDrop/BspDragDrop-Prefix.pch";
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_object;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		FA515F03136DCD1100A8F962 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEAD_CODE_STRIPPING = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BspDragDrop/BspDragDrop-Prefix.pch";
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_object;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		FA515F05136DCD1100A8F962 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = UniversalFramework;
+			};
+			name = Debug;
+		};
+		FA515F06136DCD1100A8F962 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = UniversalFramework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA515EEE136DCD1100A8F962 /* Build configuration list for PBXProject "BspDragDrop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA515EFF136DCD1100A8F962 /* Debug */,
+				FA515F00136DCD1100A8F962 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA515F01136DCD1100A8F962 /* Build configuration list for PBXNativeTarget "BspDragDrop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA515F02136DCD1100A8F962 /* Debug */,
+				FA515F03136DCD1100A8F962 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FA515F04136DCD1100A8F962 /* Build configuration list for PBXAggregateTarget "Universal_Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA515F05136DCD1100A8F962 /* Debug */,
+				FA515F06136DCD1100A8F962 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA515EEB136DCD1100A8F962 /* Project object */;
+}
