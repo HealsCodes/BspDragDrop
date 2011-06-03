@@ -22,12 +22,38 @@
 
 /* Begin PBXBuildFile section */
 		FA515EFE136DCD1100A8F962 /* BspDragDrop-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA515EFD136DCD1100A8F962 /* BspDragDrop-Info.plist */; };
+		FA515F11136DCD5B00A8F962 /* BspDragDropBackgroundView-private.h in Headers */ = {isa = PBXBuildFile; fileRef = FA515F08136DCD5B00A8F962 /* BspDragDropBackgroundView-private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		FA515F12136DCD5B00A8F962 /* BspDragDropBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA515F09136DCD5B00A8F962 /* BspDragDropBackgroundView.m */; };
+		FA515F13136DCD5B00A8F962 /* BspDragDropFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = FA515F0A136DCD5B00A8F962 /* BspDragDropFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA515F14136DCD5B00A8F962 /* BspDragDropItemBar-private.h in Headers */ = {isa = PBXBuildFile; fileRef = FA515F0B136DCD5B00A8F962 /* BspDragDropItemBar-private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		FA515F15136DCD5B00A8F962 /* BspDragDropItemBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FA515F0C136DCD5B00A8F962 /* BspDragDropItemBar.m */; };
+		FA515F16136DCD5B00A8F962 /* BspDragDropItemView-private.h in Headers */ = {isa = PBXBuildFile; fileRef = FA515F0D136DCD5B00A8F962 /* BspDragDropItemView-private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		FA515F17136DCD5B00A8F962 /* BspDragDropItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA515F0E136DCD5B00A8F962 /* BspDragDropItemView.m */; };
+		FA515F18136DCD5B00A8F962 /* BspDragDropTargetView-private.h in Headers */ = {isa = PBXBuildFile; fileRef = FA515F0F136DCD5B00A8F962 /* BspDragDropTargetView-private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		FA515F19136DCD5B00A8F962 /* BspDragDropTargetView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA515F10136DCD5B00A8F962 /* BspDragDropTargetView.m */; };
+		FA515F1F136DCDB500A8F962 /* BspDragDropBackgroundView.h in Headers */ = {isa = PBXBuildFile; fileRef = FA515F1B136DCDB500A8F962 /* BspDragDropBackgroundView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA515F20136DCDB500A8F962 /* BspDragDropItemBar.h in Headers */ = {isa = PBXBuildFile; fileRef = FA515F1C136DCDB500A8F962 /* BspDragDropItemBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA515F21136DCDB500A8F962 /* BspDragDropItemView.h in Headers */ = {isa = PBXBuildFile; fileRef = FA515F1D136DCDB500A8F962 /* BspDragDropItemView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA515F22136DCDB500A8F962 /* BspDragDropTargetView.h in Headers */ = {isa = PBXBuildFile; fileRef = FA515F1E136DCDB500A8F962 /* BspDragDropTargetView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA515EF6136DCD1100A8F962 /* BspDragDrop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BspDragDrop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA515EFC136DCD1100A8F962 /* BspDragDrop-Prefix.pch */ = {isa = PBXFileReference; path = "BspDragDrop-Prefix.pch"; sourceTree = "<group>"; };
+		FA515EFC136DCD1100A8F962 /* BspDragDrop-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BspDragDrop-Prefix.pch"; sourceTree = "<group>"; };
 		FA515EFD136DCD1100A8F962 /* BspDragDrop-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BspDragDrop-Info.plist"; sourceTree = "<group>"; };
+		FA515F08136DCD5B00A8F962 /* BspDragDropBackgroundView-private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BspDragDropBackgroundView-private.h"; sourceTree = "<group>"; };
+		FA515F09136DCD5B00A8F962 /* BspDragDropBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BspDragDropBackgroundView.m; sourceTree = "<group>"; };
+		FA515F0A136DCD5B00A8F962 /* BspDragDropFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BspDragDropFramework.h; sourceTree = "<group>"; };
+		FA515F0B136DCD5B00A8F962 /* BspDragDropItemBar-private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BspDragDropItemBar-private.h"; sourceTree = "<group>"; };
+		FA515F0C136DCD5B00A8F962 /* BspDragDropItemBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BspDragDropItemBar.m; sourceTree = "<group>"; };
+		FA515F0D136DCD5B00A8F962 /* BspDragDropItemView-private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BspDragDropItemView-private.h"; sourceTree = "<group>"; };
+		FA515F0E136DCD5B00A8F962 /* BspDragDropItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BspDragDropItemView.m; sourceTree = "<group>"; };
+		FA515F0F136DCD5B00A8F962 /* BspDragDropTargetView-private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BspDragDropTargetView-private.h"; sourceTree = "<group>"; };
+		FA515F10136DCD5B00A8F962 /* BspDragDropTargetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BspDragDropTargetView.m; sourceTree = "<group>"; };
+		FA515F1B136DCDB500A8F962 /* BspDragDropBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BspDragDropBackgroundView.h; sourceTree = "<group>"; };
+		FA515F1C136DCDB500A8F962 /* BspDragDropItemBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BspDragDropItemBar.h; sourceTree = "<group>"; };
+		FA515F1D136DCDB500A8F962 /* BspDragDropItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BspDragDropItemView.h; sourceTree = "<group>"; };
+		FA515F1E136DCDB500A8F962 /* BspDragDropTargetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BspDragDropTargetView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +86,7 @@
 		FA515EFA136DCD1100A8F962 /* BspDragDrop */ = {
 			isa = PBXGroup;
 			children = (
+				FA515F07136DCD2C00A8F962 /* Classes */,
 				FA515EFD136DCD1100A8F962 /* BspDragDrop-Info.plist */,
 				FA515EFB136DCD1100A8F962 /* Supporting Files */,
 			);
@@ -74,6 +101,42 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FA515F07136DCD2C00A8F962 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FA515F23136DCDBC00A8F962 /* public_headers */,
+				FA515F1A136DCD8A00A8F962 /* private_headers */,
+				FA515F0C136DCD5B00A8F962 /* BspDragDropItemBar.m */,
+				FA515F0E136DCD5B00A8F962 /* BspDragDropItemView.m */,
+				FA515F10136DCD5B00A8F962 /* BspDragDropTargetView.m */,
+				FA515F09136DCD5B00A8F962 /* BspDragDropBackgroundView.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		FA515F1A136DCD8A00A8F962 /* private_headers */ = {
+			isa = PBXGroup;
+			children = (
+				FA515F08136DCD5B00A8F962 /* BspDragDropBackgroundView-private.h */,
+				FA515F0B136DCD5B00A8F962 /* BspDragDropItemBar-private.h */,
+				FA515F0D136DCD5B00A8F962 /* BspDragDropItemView-private.h */,
+				FA515F0F136DCD5B00A8F962 /* BspDragDropTargetView-private.h */,
+			);
+			name = private_headers;
+			sourceTree = "<group>";
+		};
+		FA515F23136DCDBC00A8F962 /* public_headers */ = {
+			isa = PBXGroup;
+			children = (
+				FA515F0A136DCD5B00A8F962 /* BspDragDropFramework.h */,
+				FA515F1C136DCDB500A8F962 /* BspDragDropItemBar.h */,
+				FA515F1D136DCDB500A8F962 /* BspDragDropItemView.h */,
+				FA515F1E136DCDB500A8F962 /* BspDragDropTargetView.h */,
+				FA515F1B136DCDB500A8F962 /* BspDragDropBackgroundView.h */,
+			);
+			name = public_headers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -81,6 +144,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA515F13136DCD5B00A8F962 /* BspDragDropFramework.h in Headers */,
+				FA515F1F136DCDB500A8F962 /* BspDragDropBackgroundView.h in Headers */,
+				FA515F20136DCDB500A8F962 /* BspDragDropItemBar.h in Headers */,
+				FA515F21136DCDB500A8F962 /* BspDragDropItemView.h in Headers */,
+				FA515F22136DCDB500A8F962 /* BspDragDropTargetView.h in Headers */,
+				FA515F11136DCD5B00A8F962 /* BspDragDropBackgroundView-private.h in Headers */,
+				FA515F14136DCD5B00A8F962 /* BspDragDropItemBar-private.h in Headers */,
+				FA515F16136DCD5B00A8F962 /* BspDragDropItemView-private.h in Headers */,
+				FA515F18136DCD5B00A8F962 /* BspDragDropTargetView-private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +249,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA515F12136DCD5B00A8F962 /* BspDragDropBackgroundView.m in Sources */,
+				FA515F15136DCD5B00A8F962 /* BspDragDropItemBar.m in Sources */,
+				FA515F17136DCD5B00A8F962 /* BspDragDropItemView.m in Sources */,
+				FA515F19136DCD5B00A8F962 /* BspDragDropTargetView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
