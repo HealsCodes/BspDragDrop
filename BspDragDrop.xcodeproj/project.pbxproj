@@ -184,7 +184,7 @@
 		FA515EEB136DCD1100A8F962 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				ORGANIZATIONNAME = "Wincor-Nixdorf Technology GmbH";
+				ORGANIZATIONNAME = "Rene Koecher";
 			};
 			buildConfigurationList = FA515EEE136DCD1100A8F962 /* Build configuration list for PBXProject "BspDragDrop" */;
 			compatibilityVersion = "Xcode 3.2";
