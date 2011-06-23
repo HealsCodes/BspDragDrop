@@ -44,6 +44,7 @@
     if (self) {
         // Initialization code
         _name = nil;
+        self.multipleTouchEnabled = YES;
     }
     return self;
 }
@@ -61,6 +62,11 @@
 {
     [self setName:nil];
     [super dealloc];
+}
+
+- (void)awakeFromNib
+{
+    self.multipleTouchEnabled = YES;
 }
 
 - (CGPoint)position

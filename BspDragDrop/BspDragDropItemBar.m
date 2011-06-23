@@ -142,6 +142,7 @@
         self.scrollsToTop = NO;
         self.showsHorizontalScrollIndicator = YES;
         self.showsVerticalScrollIndicator = NO;
+        self.multipleTouchEnabled = YES;
     }
     return self;
 }
@@ -178,6 +179,7 @@
     self.scrollsToTop = NO;
     self.showsHorizontalScrollIndicator = YES;
     self.showsVerticalScrollIndicator = NO;
+    self.multipleTouchEnabled = YES;
 }
 
 /*
@@ -285,7 +287,7 @@
                         
             [UIView animateWithDuration:1.0
                                   delay:delay
-                                options:UIViewAnimationOptionCurveEaseInOut
+                                options:(UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAllowUserInteraction)
                              animations:^{
                                  // animate the thumbnail growing it to the final size
                                  thumbNail.alpha = 1.0;
@@ -337,6 +339,8 @@
         for (UIView *item in _items)
         {
             [UIView animateWithDuration:1.0
+                                  delay:0
+                                options:UIViewAnimationOptionAllowUserInteraction
                              animations:^{
                                  item.alpha = 0.0;
                              }
@@ -381,10 +385,14 @@
     [self addSubview:tintView];
     [tintView release];
     
-    [UIView animateWithDuration:0.5 animations:^{
-        self.scrollEnabled = NO;
-        tintView.alpha = 0.5;
-    }];
+    [UIView animateWithDuration:0.5 
+                          delay:0
+                        options:UIViewAnimationOptionAllowUserInteraction 
+                     animations:^{
+                         self.scrollEnabled = NO;
+                         tintView.alpha = 0.5;
+                     }
+                     completion:NULL];
 }
 
 - (void)endDragLock
@@ -402,6 +410,8 @@
         if (tintView)
         {
             [UIView animateWithDuration:0.5
+                                  delay:0
+                                options:UIViewAnimationOptionAllowUserInteraction
                              animations:^{
                                  self.scrollEnabled = YES;
                                  tintView.alpha = 0.0;
@@ -506,7 +516,11 @@
             }
         }
 
-        [UIView animateWithDuration:0.2 animations:^{ item.center = locInSuper; }];
+        [UIView animateWithDuration:0.2 
+                              delay:0
+                            options:UIViewAnimationOptionAllowUserInteraction
+                         animations:^{ item.center = locInSuper; }
+                         completion:NULL];
         [_items removeObject:item];
         [self beginDragLock];
     }
@@ -545,6 +559,8 @@
             if (animated)
             {
                 [UIView animateWithDuration:0.2 
+                                      delay:0
+                                    options:UIViewAnimationOptionAllowUserInteraction
                                  animations:^{ 
                                      item.center = item._itemBarInitialCenter; 
                                  }
@@ -624,6 +640,8 @@
         [self scrollRectToVisible:viewRect animated:YES];
     
         [UIView animateWithDuration:0.2
+                              delay:0
+                            options:UIViewAnimationOptionAllowUserInteraction
                          animations:^{
                              theItem.center = [_backgroundView convertPoint:theItem._itemBarCenter fromView:self];
                          } 

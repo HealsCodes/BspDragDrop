@@ -50,6 +50,7 @@
         _itemBar = nil;
         _targetView = nil;
         _activeItem = nil;
+        self.multipleTouchEnabled = YES;
     }
     return self;
 }
@@ -84,6 +85,7 @@
     {
         _trackedItems = [[NSMutableArray alloc] initWithCapacity:2];
     }
+    self.multipleTouchEnabled = YES;
 }
 
 #pragma mark semi-private API
@@ -106,6 +108,7 @@
     [_trackedItems addObject:item];
     _activeItem = item;
     item.userInteractionEnabled = YES;
+    [self bringSubviewToFront:item];
     
     if (_delegate && [(NSObject*)_delegate respondsToSelector:@selector(backgroundView:startedTrackingItem:)])
     {
@@ -122,25 +125,69 @@
     }
 }
 
+- (UITouch *)closestFromSet:(NSSet *)touches toItem:(UIView *)item
+{
+    double dMin = INFINITY;
+    UITouch *touch = nil;
+    
+    if (touches.count > 1)
+    {
+        //NSLog(@"DDBackground: selecting closest touch from a list of %d", touches.count);
+        for (UITouch *tmp in [touches allObjects])
+        {
+            CGPoint p = [tmp locationInView:self];
+            double d = sqrt(pow(item.center.x - p.x, 2) + pow(item.center.y - p.y, 2));
+        
+            if (d < dMin && (tmp.phase != UITouchPhaseCancelled || tmp.phase != UITouchPhaseEnded) )
+            {
+                //NSLog(@"DDBackground: %f is closer than %f - new closest: %p", d, dMin, touch);
+                touch = tmp;
+                dMin = d;
+            }
+        }
+        //NSLog(@"DDBackground: closest touch is %p with a distance of %f", touch, dMin);
+    }
+    else
+    {
+        //NSLog(@"DDBackround: closest with only one touch in set");
+        touch = [touches anyObject];
+    }
+    return touch;
+}
+
 #pragma mark UIView touch-Event handling
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    UITouch *touch = [[touches allObjects] objectAtIndex:0];
-    UIView *item = touch.view;
+    UITouch *touch;// = [[touches allObjects] objectAtIndex:0];
+    UIView *item;// = touch.view;
     
-    if (touch.view == nil)
+    if (_activeItem)
     {
-        item = [self hitTest:[touch locationInView:self] withEvent:event];
-    }
-    if (![_trackedItems containsObject:item])
-    {
-        //        NSLog(@"DDBackground: not a tracked item: %@", item);
-        _activeItem = nil;
+        //NSLog(@"DDBackground: ignore new touches while _activeItem is set");
         return;
     }
     
-    _activeItem = (BspDragDropItemView*)item;
+    _activeItem = nil;
+    for (touch in [touches allObjects]) {
+        // iterate over all touches and check for the first hitting an item
+        item = touch.view;
+
+        if (touch.view == nil)
+        {
+            item = [self hitTest:[touch locationInView:self] withEvent:event];
+        }
+        if ([_trackedItems containsObject:item])
+        {
+            _activeItem = (BspDragDropItemView*)item;
+            break;
+        }
+    }
+    if (!_activeItem)
+    {
+        return;
+    }
+    
     if (_itemBar)
     {
         [_itemBar beginDragLock];
@@ -150,26 +197,21 @@
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    UITouch *touch = [[touches allObjects] objectAtIndex:0];
-/*    UIView *item = touch.view;
+    UITouch *touch = nil;
     
-    if (touch.view == nil)
-    {
-        item = [self hitTest:[touch locationInView:self] withEvent:event];
-    }
-    if (![_trackedItems containsObject:item])
-    {
-        //        NSLog(@"DDBackground: not a tracked item: %@", item);
-        return;
-    }
- 
-    item.center = [touch locationInView:self];
-*/
     if (!_activeItem)
     {
         return;
     }
+    touch = [self closestFromSet:[event allTouches] toItem:_activeItem];
+    if (!touch)
+    {
+        // should not happen
+        return;
+    }
     _activeItem.center = [touch locationInView:self];
+    [self bringSubviewToFront:_activeItem];
+    
     if (_targetView)
     {
         [_targetView pickUpNotification:(BspDragDropItemView*)_activeItem];
@@ -183,13 +225,16 @@
     NSAssert(_itemBar != nil, @"Invalid itemBar!");
     NSAssert(_targetView != nil, @"Invalid targetView!");
     
-    UITouch *touch = [[touches allObjects] objectAtIndex:0];
+    UITouch *touch = nil;
     
     BspDragDropItemView *item = nil;
     
     CGPoint dropLocation;
     BOOL dropIsValid = YES;
     
+/*
+ * Should be obsolete with the addition af _activeItem...
+ 
     if (touch.view == nil)
     {
         // default case if the touches get passed by the itemBar.. (too bad)
@@ -226,7 +271,20 @@
             item = (BspDragDropItemView*)touch.view;
         }
     }
+*/
+    if (!_activeItem)
+    {
+        return;
+    }
     
+    touch = [self closestFromSet:[event allTouches] toItem:_activeItem];
+    if (!touch)
+    {
+        // should not happen
+        return;
+    }
+    
+    item = _activeItem;
     if (dropIsValid && ![_targetView pointInside:[touch locationInView:_targetView]
                                        withEvent:event])
     {
@@ -294,6 +352,17 @@
         [_itemBar endDragLock];
     }
     [super touchesEnded:touches withEvent:event];
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if (_activeItem)
+    {
+        //for gods sake
+        [self touchesEnded:touches withEvent:event];
+        return;
+    }
+    [super touchesCancelled:touches withEvent:event];
 }
 
 - (void)finalizeReplacement:(BspDragDropItemView*)item

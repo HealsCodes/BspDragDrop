@@ -48,6 +48,7 @@
     {
         // Initialization code
         _items = [[NSMutableArray alloc] initWithCapacity:10];
+        self.multipleTouchEnabled = YES;
     }
     return self;
 }
@@ -98,6 +99,7 @@
     {
         _items = [[NSMutableArray alloc] initWithCapacity:10];
     }
+    self.multipleTouchEnabled = YES;
 }
 - (void)resetItems:(BOOL)animated
 {
